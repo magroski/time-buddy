@@ -1,0 +1,7 @@
+version: '3.5'
+
+services:
+  php:
+    image: talentify/flux:dev-1.2.0
+    volumes:
+      - "./:/var/www"
