@@ -1,7 +1,9 @@
 version: '3.5'
 
 services:
-  php:
-    image: talentify/flux:dev-1.2.0
+  app:
+    image: magroski/php-dev:cli
     volumes:
-      - "./:/var/www"
+      - "./:/usr/src/app"
+    working_dir: "/usr/src/app/"
+    user: ${CURRENT_UID}
