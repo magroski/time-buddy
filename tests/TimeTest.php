@@ -128,4 +128,22 @@ class TimeTest extends TestCase
 
         $this->assertInstanceOf(DateInterval::class, $dateInterval);
     }
+
+    public function testLocaleFormat() : void
+    {
+        $immutable = new \DateTimeImmutable('2019-04-05 10:10:10');
+        $time      = new Time($immutable);
+
+        $this->assertEquals('Fri', $time->format('D'));
+        $this->assertEquals('Friday', $time->format('l'));
+        $this->assertEquals('Apr', $time->format('M'));
+        $this->assertEquals('April', $time->format('F'));
+
+        $time->setLocale('pt_BR');
+
+        $this->assertEquals('Sex', $time->format('D'));
+        $this->assertEquals('Sexta', $time->format('l'));
+        $this->assertEquals('Abr', $time->format('M'));
+        $this->assertEquals('Abril', $time->format('F'));
+    }
 }
