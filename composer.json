@@ -15,7 +15,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "TimeBuddy\\": ["src"]
+            "TimeBuddy\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TimeBuddy\\": "tests/"
         }
     },
     "minimum-stability": "stable",
@@ -23,7 +28,7 @@
         "php": "^7.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.4",
+        "phpunit/phpunit": "^7.5",
         "phpstan/phpstan": "^0.10.0",
         "object-calisthenics/phpcs-calisthenics-rules": "^3.1",
         "roave/security-advisories": "dev-master",
