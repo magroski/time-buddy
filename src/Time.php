@@ -35,7 +35,7 @@ class Time
             throw new \RuntimeException('Default en_US provider could not be loaded');
         }
         $this->textProvider = $defaultProvider;
-        
+
         if ($immutable !== null) {
             $this->time = $immutable;
 

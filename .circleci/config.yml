@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: magroski/frogg-test-image
+      - image: magroski/php-dev:cli
     steps:
       - checkout
       - restore_cache:
