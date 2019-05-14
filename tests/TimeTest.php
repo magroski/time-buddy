@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace TimeBuddy;
+namespace TimeBuddy\Tests;
 
 use PHPUnit\Framework\TestCase;
+use TimeBuddy\DateInterval;
+use TimeBuddy\Time;
 
 class TimeTest extends TestCase
 {
