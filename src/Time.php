@@ -28,6 +28,9 @@ class Time
         return new self(new \DateTimeImmutable("@{$unixTimestamp}"));
     }
 
+    /**
+     * Time is a construct.
+     */
     public function __construct(?\DateTimeImmutable $immutable = null)
     {
         $defaultProvider = $this->getTextProviderInstance();
